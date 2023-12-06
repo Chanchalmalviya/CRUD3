@@ -74,7 +74,8 @@ def Product_update(request):
         uid = request.POST['uid']
         title =request.POST['title']
         description = request.POST['description']
-        Product.objects.filter(uid=uid).update(title=title,description=description)
+        product_image = request.FILES.get("product_image") 
+        Product.objects.filter(id=uid).update(title=title,description=description,product_image=product_image)
         return redirect("/product/")
     
    
