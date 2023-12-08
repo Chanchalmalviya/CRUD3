@@ -14,6 +14,6 @@ urlpatterns = [
     path("add_product/",views.add_product),
     path("delete/<int:pk>/",views.delete_product,name="delete"),
     path("productupdate/<int:uid>/",views.productupdate,name="productupdate"),
-    path("update/",views.Product_update),
+    path("update/",views.Product_update,name="update"),
     
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

@@ -37,7 +37,7 @@ tr:nth-child(even) {
     <td value="{{p.id}}" selected>{{p.title}}</td>
     <td>{{p.description}}</td>
     {% if p.product_image %}
-    <td><img src="{{p.product_image.url}}" height="20px"></td>
+    <td><img src="{{p.product_image.url}}" height="50px"></td>
     {% endif %}
     <td> <a href ="/delete/{{p.id}}"> Delete</a></td>
     <td> <a href ="/productupdate/{{p.id}}"> Update</a></td>

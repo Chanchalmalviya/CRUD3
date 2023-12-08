@@ -13,17 +13,17 @@
     <form action="/update/" method ="post" enctype="multipart/form-data">
       {% csrf_token %}
       <div class="mb-3">
-        <input type="hidden" name="uid" value="{{user_obj.uid}}">
+        <input type="hidden" name="uid" value="{{user_obj.id}}">
         <label for="exampleInputEmail1" class="form-label">Tital </label>
-        <input type="text" class="form-control" name ="title"  >
+        <input type="text" class="form-control" name ="title" value={{user_obj.description}} >
     </div>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Description</label>
-      <input type="text" name="description" class="form-control">
+      <input type="text" name="description" value={{user_obj.title}}  class="form-control" >
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Product Image</label>
-        <input type="file" name ="product_image" class="form-control" >
+        <input type="file" name ="product_image" value={{user_obj.product_image}} class="form-control" >
     </div>
         
         <button type="submit" class="registerbtn">Upadte</button>
